@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iowa Veterans by County | Iowa Veterans Accountability</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f4f8;
+            color: #202b38;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #102c50, #204d79);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background: #10243d;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f0c65c;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            color: #12365a;
+            border-bottom: 3px solid #c6a052;
+            padding-bottom: 10px;
+        }
+
+        .highlight {
+            background: #edf4fa;
+            border-left: 5px solid #c6a052;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .county-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .county-card {
+            background: #173c62;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .county-card h3 {
+            color: #f0c65c;
+            margin-top: 0;
+        }
+
+        .county-card p {
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: #173c62;
+            color: white;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 14px;
+            border: 1px solid #d8e0e8;
+        }
+
+        tr:nth-child(even) {
+            background: #f1f4f8;
+        }
+
+        footer {
+            background: #10243d;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            section {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>IOWA VETERANS BY COUNTY</h1>
+    <p>Examining Veteran Populations, Benefits, and Public Spending</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="counties.html">Iowa Counties</a>
+    <a href="index.html#spending">Follow the Money</a>
+    <a href="index.html#investigations">Investigations</a>
+    <a href="index.html#sources">Sources</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>Understanding Iowa's 99 Counties</h2>
+
+        <p>
+            Iowa has 99 counties, each with veterans who may qualify
+            for federal benefits, healthcare, housing assistance,
+            and other services.
+        </p>
+
+        <p>
+            This research project examines the geographic distribution
+            of veterans and VA benefits across Iowa.
+        </p>
+
+        <div class="highlight">
+            <strong>Our goal:</strong>
+            Determine how many veterans are estimated to live in each
+            county, how much VA funding is attributed to each county,
+            and what information is available about veterans who
+            are not receiving assistance.
+        </div>
+    </section>
+
+    <section>
+        <h2>Counties Under Review</h2>
+
+        <div class="county-grid">
+
+            <div class="county-card">
+                <h3>Polk County</h3>
+                <p><strong>Major city:</strong> Des Moines</p>
+                <p><strong>Veteran population:</strong> Research pending</p>
+                <p><strong>VA spending:</strong> Research pending</p>
+                <p><strong>Housing assistance:</strong> Research pending</p>
+            </div>
+
+            <div class="county-card">
+                <h3>Dallas County</h3>
+                <p><strong>Major city:</strong> Adel</p>
+                <p><strong>Veteran population:</strong> Research pending</p>
+                <p><strong>VA spending:</strong> Research pending</p>
+                <p><strong>Housing assistance:</strong> Research pending</p>
+            </div>
+
+            <div class="county-card">
+                <h3>Story County</h3>
+                <p><strong>Major city:</strong> Ames</p>
+                <p><strong>Veteran population:</strong> Research pending</p>
+                <p><strong>VA spending:</strong> Research pending</p>
+                <p><strong>Housing assistance:</strong> Research pending</p>
+            </div>
+
+            <div class="county-card">
+                <h3>Linn County</h3>
+                <p><strong>Major city:</strong> Cedar Rapids</p>
+                <p><strong>Veteran population:</strong> Research pending</p>
+                <p><strong>VA spending:</strong> Research pending</p>
+                <p><strong>Housing assistance:</strong> Research pending</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>County-by-County Spending Tracker</h2>
+
+        <p>
+            This table will be updated as county-level data
+            is verified using official government reports.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>County</th>
+                    <th>Veterans</th>
+                    <th>VA Spending</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Polk</td>
+                    <td>Pending</td>
+                    <td>Pending</td>
+                    <td>Under Review</td>
+                </tr>
+
+                <tr>
+                    <td>Dallas</td>
+                    <td>Pending</td>
+                    <td>Pending</td>
+                    <td>Under Review</td>
+                </tr>
+
+                <tr>
+                    <td>Story</td>
+                    <td>Pending</td>
+                    <td>Pending</td>
+                    <td>Under Review</td>
+                </tr>
+
+                <tr>
+                    <td>Linn</td>
+                    <td>Pending</td>
+                    <td>Pending</td>
+                    <td>Under Review</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Where Will the Data Come From?</h2>
+
+        <p>
+            County-level information will be gathered from
+            publicly available sources, including:
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://www.va.gov/vetdata/Expenditures.asp"
+                   target="_blank" rel="noopener noreferrer">
+                    VA Geographic Distribution of Expenditures
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.va.gov/vetdata/Veteran_Population.asp"
+                   target="_blank" rel="noopener noreferrer">
+                    VA Veteran Population Estimates
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.vaoig.gov/"
+                   target="_blank" rel="noopener noreferrer">
+                    VA Office of Inspector General
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.census.gov/"
+                   target="_blank" rel="noopener noreferrer">
+                    U.S. Census Bureau
+                </a>
+            </li>
+        </ul>
+
+        <div class="highlight">
+            <strong>Research standard:</strong>
+            All published figures should identify their reporting
+            year and original source. Estimates, actual expenditures,
+            and verified individual payments must not be confused.
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p><strong>IOWA VETERANS ACCOUNTABILITY</strong></p>
+    <p>Follow the Money. Examine the Evidence. Demand Transparency.</p>
+    <p>Independent Research Project | November 2026</p>
+</footer>
+
+</body>
+</html>

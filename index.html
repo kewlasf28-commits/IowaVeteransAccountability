@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iowa Veterans by County | Iowa Veterans Accountability</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f4f8;
+            color: #202b38;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #102c50, #204d79);
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 0 0 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            max-width: 850px;
+            margin: 10px auto;
+        }
+
+        nav {
+            background: #10243d;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f0c65c;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            color: #12365a;
+            border-bottom: 3px solid #c6a052;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #204d79;
+        }
+
+        .highlight {
+            background: #edf4fa;
+            border-left: 5px solid #c6a052;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .county-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .county-card {
+            background: #173c62;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .county-card h3 {
+            color: #f0c65c;
+            margin-top: 0;
+            font-size: 23px;
+        }
+
+        .county-card p {
+            margin: 12px 0;
+        }
+
+        .county-card strong {
+            color: #ffffff;
+        }
+
+        .data-note {
+            font-size: 14px;
+            color: #526173;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: #173c62;
+            color: white;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 14px;
+            border: 1px solid #d8e0e8;
+        }
+
+        tr:nth-child(even) {
+            background: #f1f4f8;
+        }
+
+        a {
+            color: #205b92;
+        }
+
+        .source-list li {
+            margin-bottom: 14px;
+        }
+
+        footer {
+            background: #10243d;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            color: #f0c65c;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 29px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            section {
+                padding: 22px;
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>IOWA VETERANS BY COUNTY</h1>
+
+        <p>
+            Follow the Money. Examine the Evidence.
+            Demand Transparency.
+        </p>
+
+        <p>
+            An independent research project examining veteran populations,
+            federal benefits, government spending, and accountability
+            across Iowa's 99 counties.
+        </p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="counties.html">Iowa Counties</a>
+        <a href="index.html#spending">Follow the Money</a>
+        <a href="index.html#homelessness">Homelessness</a>
+        <a href="index.html#investigations">Investigations</a>
+        <a href="#sources">Sources</a>
+    </nav>
+
+    <main>
+
+        <!-- INTRODUCTION -->
+
+        <section id="overview">
+            <h2>Understanding Iowa's 99 Counties</h2>
+
+            <p>
+                Iowa has 99 counties, each with veterans who may qualify
+                for disability compensation, healthcare, education,
+                housing assistance, and other federal benefits.
+            </p>
+
+            <p>
+                Understanding how these benefits are distributed
+                requires examining veteran population estimates,
+                actual government expenditures, and the availability
+                of assistance programs.
+            </p>
+
+            <div class="highlight">
+                <strong>Our Mission:</strong>
+                Determine how many veterans are estimated to live
+                in each county, how much federal funding is attributed
+                to each county, and whether veterans who need
+                assistance can access available programs.
+            </div>
+
+            <p>
+                This project begins with Polk, Dallas, Story, and Linn
+                counties. Additional counties will be added as
+                information is verified.
+            </p>
+        </section>
+
+
+        <!-- COUNTY CARDS -->
+
+        <section id="counties">
+
+            <h2>Veteran Population by County</h2>
+
+            <p>
+                The following veteran population figures are
+                estimates reported for 2024 using American Community
+                Survey data.
+            </p>
+
+            <div class="county-grid">
+
+                <div class="county-card">
+                    <h3>Polk County</h3>
+
+                    <p>
+                        <strong>Major City:</strong>
+                        Des Moines
+                    </p>
+
+                    <p>
+                        <strong>Estimated Veterans:</strong>
+                        21,413
+                    </p>
+
+                    <p>
+                        <strong>Compensation &amp; Pension:</strong>
+                        Approximately $203.6 million
+                    </p>
+
+                    <p>
+                        <strong>Medical Care:</strong>
+                        Approximately $234.1 million
+                    </p>
+
+                    <p>
+                        <strong>Reporting Years:</strong>
+                        2024 population / FY2025 spending
+                    </p>
+                </div>
+
+
+                <div class="county-card">
+                    <h3>Dallas County</h3>
+
+                    <p>
+                        <strong>Major City:</strong>
+                        Adel
+                    </p>
+
+                    <p>
+                        <strong>Estimated Veterans:</strong>
+                        4,323
+                    </p>
+
+                    <p>
+                        <strong>VA Spending:</strong>
+                        Research pending
+                    </p>
+
+                    <p>
+                        <strong>Reporting Year:</strong>
+                        2024
+                    </p>
+                </div>
+
+
+                <div class="county-card">
+                    <h3>Story County</h3>
+
+                    <p>
+                        <strong>Major City:</strong>
+                        Ames
+                    </p>
+
+                    <p>
+                        <strong>Estimated Veterans:</strong>
+                        3,337
+                    </p>
+
+                    <p>
+                        <strong>VA Spending:</strong>
+                        Research pending
+                    </p>
+
+                    <p>
+                        <strong>Reporting Year:</strong>
+                        2024
+                    </p>
+                </div>
+
+
+                <div class="county-card">
+                    <h3>Linn County</h3>
+
+                    <p>
+                        <strong>Major City:</strong>
+                        Cedar Rapids
+                    </p>
+
+                    <p>
+                        <strong>Estimated Veterans:</strong>
+                        13,209
+                    </p>
+
+                    <p>
+                        <strong>VA Spending:</strong>
+                        Research pending
+                    </p>
+
+                    <p>
+                        <strong>Reporting Year:</strong>
+                        2024
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="data-note">
+                Note: Veteran population estimates are not an
+                individually verified count of every veteran.
+                County spending figures represent government
+                expenditure categories, not necessarily direct
+                deposits to individual veterans.
+            </p>
+
+        </section>
+
+
+        <!-- SPENDING TABLE -->
+
+        <section id="spending">
+
+            <h2>County-by-County VA Spending Tracker</h2>
+
+            <p>
+                This table compares reported veteran population
+                estimates with available financial information.
+            </p>
+
+            <p>
+                Spending categories must be interpreted carefully.
+                Disability compensation and pensions differ from
+                medical care, employee compensation, and other
+                operating expenses.
+            </p>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>County</th>
+                            <th>Estimated Veterans</th>
+                            <th>Compensation &amp; Pension</th>
+                            <th>Data Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Polk</td>
+                            <td>21,413</td>
+                            <td>Approx. $203.6 million</td>
+                            <td>FY2025 reported figure</td>
+                        </tr>
+
+                        <tr>
+                            <td>Dallas</td>
+                            <td>4,323</td>
+                            <td>Research pending</td>
+                            <td>Population estimate available</td>
+                        </tr>
+
+                        <tr>
+                            <td>Story</td>
+                            <td>3,337</td>
+                            <td>Research pending</td>
+                            <td>Population estimate available</td>
+                        </tr>
+
+                        <tr>
+                            <td>Linn</td>
+                            <td>13,209</td>
+                            <td>Research pending</td>
+                            <td>Population estimate available</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="highlight">
+                <strong>Important distinction:</strong>
+                Compensation and pension expenditures are not
+                the same as total VA expenditures.
+
+                Medical spending may include payments to
+                healthcare providers and costs of delivering care.
+
+                Neither category should automatically be
+                classified as employee payroll.
+            </div>
+
+        </section>
+
+
+        <!-- ACCOUNTABILITY -->
+
+        <section id="accountability">
+
+            <h2>Questions About County-Level Accountability</h2>
+
+            <p>
+                Public financial records provide important
+                information about spending, but additional
+                records are necessary to determine how effectively
+                programs serve veterans.
+            </p>
+
+            <ol>
+                <li>
+                    How much disability compensation is paid
+                    directly to veterans residing in each Iowa county?
+                </li>
+
+                <li>
+                    How much money is spent on VA employees,
+                    administration, and contracted services?
+                </li>
+
+                <li>
+                    How many veterans in each county experience
+                    homelessness during an entire year?
+                </li>
+
+                <li>
+                    How many veterans request housing assistance
+                    but do not receive it?
+                </li>
+
+                <li>
+                    How many benefits claims are denied, delayed,
+                    or overturned on appeal?
+                </li>
+
+                <li>
+                    What independent audits have identified
+                    financial errors or weaknesses affecting
+                    veterans in Iowa?
+                </li>
+
+                <li>
+                    What improvements have resulted from
+                    government investigations and recommendations?
+                </li>
+            </ol>
+
+            <div class="highlight">
+                <strong>Research Principle:</strong>
+                Financial transparency requires distinguishing
+                documented facts, statistical estimates,
+                unresolved questions, and confirmed wrongdoing.
+            </div>
+
+        </section>
+
+
+        <!-- SOURCES -->
+
+        <section id="sources">
+
+            <h2>Sources and Government Records</h2>
+
+            <p>
+                The following resources provide population estimates,
+                spending records, and federal oversight information.
+            </p>
+
+            <ul class="source-list">
+
+                <li>
+                    <a href="https://www.va.gov/vetdata/Expenditures.asp"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Department of Veterans Affairs —
+                        Geographic Distribution of Expenditures
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.va.gov/vetdata/Veteran_Population.asp"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        VA Veteran Population Estimates
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://data.census.gov/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        U.S. Census Bureau —
+                        American Community Survey
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.vaoig.gov/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        VA Office of Inspector General
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.gao.gov/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        U.S. Government Accountability Office
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://censuseasy.com/rankings/largest-veteran-population-counties/ia"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        County Veteran Population Comparison —
+                        CensusEasy
+                    </a>
+                </li>
+
+            </ul>
+
+            <p class="data-note">
+                Population figures are estimates attributed to
+                2024 Census survey data. The Polk County spending
+                figures are approximate FY2025 amounts previously
+                reported from VA expenditure data and should be
+                checked against the original federal dataset
+                before formal publication.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>IOWA VETERANS ACCOUNTABILITY</h3>
+
+        <p>
+            Follow the Money. Examine the Evidence.
+            Demand Transparency.
+        </p>
+
+        <p>
+            Independent Public-Interest Research
+            | November 2026
+        </p>
+
+        <p>
+            This website is not affiliated with the
+            U.S. Department of Veterans Affairs or
+            any government agency.
+        </p>
+
+    </footer>
+
+</body>
+</html>
